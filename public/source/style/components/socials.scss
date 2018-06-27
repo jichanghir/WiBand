@@ -1,0 +1,27 @@
+.socials {
+    &__link {
+        text-decoration: none;
+        margin-left: 10px;
+
+        svg {
+            fill: white;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    &__footer {
+        svg {
+            fill: #000;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .socials {
+        &__link {
+            margin: 0 5px;
+        }
+    }
+}
+

@@ -1,0 +1,18 @@
+mixin blog(articles)
+    section.blog-content.blog
+        .blog-content__left
+            aside.blog__article-titles#blog__article-titles
+                ul.blog__article-list#blog__article-list
+                    each article, index in articles
+                        li(id=`${index}`).blog__article-title
+                            a(href=`#${article.title}`).blog__article-link= article.title
+
+                .blog__article-adaptive-btn#blog__article-adaptive-btn
+
+        .blog-content__right
+            each article, index in articles
+                a(name=`${article.title}`)
+                .blog__article(data-idtitle=`${index}`)
+                    .blog__title= article.title
+                    .blog__date= article.date
+                    .blog__text.simple-text= article.body

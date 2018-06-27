@@ -1,0 +1,22 @@
+block variables
+
+doctype html
+html
+    head
+        meta(charset = 'utf-8')
+        //meta(name='viewport', content="initial-scale=1.0, width=device-width")
+
+        title
+            block page-title
+        link(rel="stylesheet" href='/build/style/foundation.css')
+        link(rel="stylesheet" href='/build/style/style.css')
+    body
+
+        block page
+
+        include ./footer
+        +footer()
+
+        script(src='/build/js/foundation.js')
+        //- script(src='js/main.js')
+        script(src='/build/js/blog.js')

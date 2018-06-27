@@ -1,0 +1,49 @@
+extends components/layout
+
+block variables
+    - some = false;
+
+block page
+
+    include components/topSection
+    +topSection('band', 'Група')
+
+    -
+        var members = [
+            {
+                name: 'Alex Serkin',
+                position: 'Guitar',
+                img: 'https://scontent.fiev4-1.fna.fbcdn.net/v/t1.0-9/31870888_1666943873374647_6455991880667627520_o.jpg?_nc_cat=0&oh=8580c9d2f4d774a627cc341cd0025c15&oe=5B866B85'
+            },
+            {
+                name: 'Sergey Serkin',
+                position: 'Bass',
+                img: 'https://scontent.fiev4-1.fna.fbcdn.net/v/t1.0-9/941138_625038067525430_131116021_n.jpg?_nc_cat=0&oh=f814d0f96d7b2e655645fac9143eb9be&oe=5BC44DAA'
+            },
+            {
+                name: 'Ludmila Antohi',
+                position: 'Vokal',
+                img: 'https://scontent.fiev4-1.fna.fbcdn.net/v/t31.0-8/25182215_556293421372859_2152417501418171312_o.jpg?_nc_cat=0&oh=ca1beda33e9afc582d22ec76201554db&oe=5B86DFD4'
+            },
+            {
+                name: 'Vlad Korolenko',
+                position: 'Drums',
+                img: 'https://scontent.fiev4-1.fna.fbcdn.net/v/t1.0-9/25446043_158445604925462_5148418893974253659_n.jpg?_nc_cat=0&oh=7bc1b51bd4c4967716197f7c063bb066&oe=5B7BF92D'
+            }
+        ];
+
+
+    .main
+        section.band-section
+            .members
+                each member in members
+                    .members__member
+                        .members__photo(style=`background-image: url(${member.img})`)
+                        .members__name= member.name
+                        .members__position= member.position
+
+            .band-section__description
+                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus enim corporis ratione autem ipsum, officiis dolorem! A hic, fugiat unde minus eligendi illum, earum, incidunt dolorum aut optio qui dolore.
+
+
+

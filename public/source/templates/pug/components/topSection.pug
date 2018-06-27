@@ -1,0 +1,12 @@
+mixin topSection(classes, title)
+    section(class=`top-section ${classes}`)
+        .main
+            .top-section__content
+                include ./header
+                +header(`top-section__header`)
+
+                .logo.top-section__logo
+                    img(src="/images/logo.png", alt="")
+
+                .top-section__title= title
+

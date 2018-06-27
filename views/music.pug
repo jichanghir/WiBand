@@ -1,0 +1,21 @@
+extends components/layout
+
+block variables
+    - some = false;
+
+block page-title
+    | #{title}
+
+block page
+
+    include components/topSection
+    +topSection('music', 'Музика')
+
+    .main
+        .music-section
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/525707490&color=%23181824&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+
+
+
+

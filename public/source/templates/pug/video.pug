@@ -1,0 +1,27 @@
+extends components/layout
+
+block variables
+    - some = false;
+
+block page
+
+    include components/topSection
+    +topSection('video', 'Відео')
+
+    .main
+        .video-section
+            a(href="").video-section__youtube-subscribe
+                svg
+                    use(xlink:href="/images/sprite.svg#youtube-logo")
+                | Підпишись на youtube канал групи "штучний інтелект"
+
+
+            .video-section__videos
+                .video-section__item
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dRFGl_XSFZo?rel=0&amp;start=92" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
+
+
+

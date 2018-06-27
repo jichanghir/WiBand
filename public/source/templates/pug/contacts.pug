@@ -1,0 +1,27 @@
+extends components/layout
+
+block variables
+    - some = false;
+
+block page
+
+    include components/topSection
+    +topSection('contacts', 'Контакти')
+
+    .main
+        .contacts-section
+            .contacts-section__row
+                .contacts-section__label Телефон:
+                a(href="tel:1233456789").contacts-section__value +1233456789
+
+            .contacts-section__row
+                .contacts-section__label Email:
+                a(href="mailto:ababa@abansd.com").contacts-section__value ababa@abansd.com
+
+
+
+
+
+
+
+

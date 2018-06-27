@@ -1,0 +1,12 @@
+mixin header(classes)
+    header(class=`header ${classes}`)
+        nav.nav.header__nav
+            a.nav__link(href="") Блог
+            a.nav__link(href="") Афіша
+            a.nav__link(href="") Група
+            a.nav__link(href="") Музика
+            a.nav__link(href="") Відео
+            a.nav__link(href="") Контакти
+
+        include ./socials
+        +socials()

@@ -1,0 +1,18 @@
+mixin schedule(dates)
+    section.schedule
+        if dates.length
+            each date in dates
+                .schedule__row
+                    .schedule__date
+                        .schedule__day= date.day
+                        .schedule__month= date.month
+                    .schedule__desk
+                        .schedule__title= date.title
+                        .schedule__place= date.place
+                        .schedule__city= date.city
+                    .schedule__img
+                        img(src=`${date.img}`, alt="")
+
+        else
+            .schedule__row
+                .schedule__title На данний момент немає запланованних концертів

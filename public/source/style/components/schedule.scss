@@ -1,0 +1,119 @@
+.schedule {
+    padding: 65px 0;
+    width: 960px;
+    margin: 0 auto;
+
+    &__row {
+        display: flex;
+        padding-bottom: 70px;
+
+        &:not(:last-child) {
+            border-bottom: 5px solid rgba($title-color, 0.07);
+            margin-bottom: 64px;
+        }
+    }
+
+    &__date {
+        width: 100px;
+        margin-right: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__desk {
+        flex: 1;
+    }
+
+    &__img {
+        width: 200px;
+        margin-left: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__day {
+        color: $title-color;
+        font: {
+            size: 42px;
+            weight: 600;
+        }
+    }
+    &__month {
+        color: $text-color;
+        font: {
+            size: 20px;
+            weight: 300;
+        }
+    }
+
+    &__title {
+        padding-top: 10px;
+        margin-bottom: 15px;
+
+        color: $title-color;
+        font: {
+            size: 30px;
+            weight: 500;
+        }
+    }
+
+    &__place {
+        color: $title-color;
+        font: {
+            size: 18px;
+            weight: 300;
+        }
+        text-transform: uppercase;
+
+        margin-bottom: 7px;
+    }
+
+    &__city {
+        color: $text-color;
+        font: {
+            size: 14px;
+            weight: 300;
+        }
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .schedule {
+        width: 100%;
+        padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .schedule {
+
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__date {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        &__desk {
+            margin-bottom: 20px;
+        }
+
+        &__img {
+            margin: 0px auto;
+        }
+    }
+}
+

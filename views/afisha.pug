@@ -1,0 +1,44 @@
+extends components/layout
+
+block variables
+    - some = false;
+
+block page-title
+    | #{title}
+
+block page
+
+    include components/topSection
+    +topSection('afisha', 'афіша')
+
+    -
+        var dates = [
+            {
+                title: 'Сольний концерт',
+                day: '18',
+                month: 'грудень',
+                place: 'some place',
+                city: 'Odessa 2018',
+                img: 'http://afisha-new.ykt.ru/static/upload/2016-01-11/3i0FjDtPNG/original.jpg'
+            },
+            {
+                title: 'Сольний концерт',
+                day: '18',
+                month: 'грудень',
+                place: 'some place',
+                city: 'Odessa 2018',
+                img: 'http://afisha-new.ykt.ru/static/upload/2016-01-11/3i0FjDtPNG/original.jpg'
+            },
+            {
+                title: 'Сольний концерт',
+                day: '18',
+                month: 'грудень',
+                place: 'some place',
+                city: 'Odessa 2018',
+                img: 'http://afisha-new.ykt.ru/static/upload/2016-01-11/3i0FjDtPNG/original.jpg'
+            }
+        ];
+
+    include components/schedule
+    +schedule(dates)
+

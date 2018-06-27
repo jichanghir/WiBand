@@ -1,0 +1,32 @@
+extends components/layout
+
+block variables
+    - some = false;
+
+block page
+
+    include components/topSection
+    +topSection('blog', 'блог')
+
+    -
+        var articles = [
+            {
+                title: 'first',
+                date: '18.07.2017',
+                body: 'Lorem ipsum dolor sit amet.'
+            },
+            {
+                title: 'second',
+                date: '18.07.2017',
+                body: 'Lorem ipsum dolor sit amet.'
+            },
+            {
+                title: 'third',
+                date: '18.07.2017',
+                body: 'Lorem ipsum dolor sit amet.'
+            }
+        ];
+
+    include components/blog
+    +blog(articles)
+

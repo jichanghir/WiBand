@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-const index = require('./routes/index');
+const blog = require('./routes/blog');
 const afisha = require('./routes/afisha');
 const band = require('./routes/band');
 const music = require('./routes/music');
@@ -26,10 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use('/', music);
 app.use('/afisha', afisha);
 app.use('/band', band);
-app.use('/music', music);
+app.use('/blog', blog);
 app.use('/video', video);
 app.use('/contacts', contacts);
 

@@ -16,3 +16,10 @@ mixin blog(articles)
                     .blog__title= article.title
                     .blog__date= article.date
                     .blog__text.simple-text= article.body
+
+                    a(href='#null', onclick=`openWin2("${article.title}")`).blog__share-link Поділитися
+
+        script.
+            function openWin2(title) {
+            myWin=open(`http://www.facebook.com/sharer.php?u=https://www.wiband.rocks/blog#${title}`,"displayWindow","width=520,height=300,left=350,top=170,status=no,toolbar=no,menubar=no");
+            }

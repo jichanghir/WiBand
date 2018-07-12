@@ -93,6 +93,22 @@
         cursor: pointer;
         display: none;
     }
+
+    &__share-link {
+        color: $text-color;
+        font: {
+            size: 14px;
+            weight: 300;
+        }
+        text-decoration: none;
+
+        margin-top: 50px;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 @media screen and (max-width: 1199px) {

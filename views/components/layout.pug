@@ -41,6 +41,11 @@ html
         include ./footer
         +footer()
 
+        script.
+            function shareOnFacebook(page) {
+            console.log('page', page);
+            myWin=open("http://www.facebook.com/sharer.php?u=https://www.wiband.rocks"+page,"displayWindow","width=520,height=300,left=350,top=170,status=no,toolbar=no,menubar=no");
+            }
         script(src='/build/js/foundation.js')
         //- script(src='js/main.js')
         script(src='/build/js/blog.js')

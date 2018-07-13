@@ -17,13 +17,8 @@ mixin blog(articles)
                     .blog__date= article.date
                     .blog__text.simple-text= article.body
 
-                    a(href='#null', onclick=`openWin2("${article.title}")`).blog__share-link Поділитися
+                    a(href='#null', onclick=`shareOnFacebook("/blog#${article.title}")`).share-link Поділитися
 
-                    //- <a class="btn" target="_blank" href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo urlencode(YOUR_TITLE);?>&amp;p[summary]=<?php echo urlencode(YOUR_PAGE_DESCRIPTION) ?>&amp;p[url]=<?php echo urlencode(YOUR_PAGE_URL); ?>&amp;p[images][0]=<?php echo urlencode(YOUR_LINK_THUMBNAIL); ?>">share on facebook</a>
 
-        script.
-            function openWin2(title) {
-            myWin=open("http://www.facebook.com/sharer.php?u=https://www.wiband.rocks/blog#"+title,"displayWindow","width=520,height=300,left=350,top=170,status=no,toolbar=no,menubar=no");
-            }
 
 

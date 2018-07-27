@@ -13,7 +13,7 @@ block page
 
     .main
         .video-section
-            a(href="").video-section__youtube-subscribe
+            a(href="https://www.youtube.com/channel/UCFPECcjKvTeivsH5ZTZ2LWw?sub_confirmation=1" target="_blank").video-section__youtube-subscribe
                 svg
                     use(xlink:href="/build/images/sprite.svg#youtube-logo")
                 | Підпишись на youtube канал групи "штучний інтелект"
@@ -21,7 +21,9 @@ block page
 
             .video-section__videos
                 .video-section__item
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dRFGl_XSFZo?rel=0&amp;start=92" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0AW4kG-BiM4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            a(href='#null', onclick=`shareOnFacebook("/video")`).share-link Поділитися
 
 
 

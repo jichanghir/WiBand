@@ -1,13 +1,15 @@
 mixin blog(articles)
     section.blog-content.blog
-        .blog-content__left
-            aside.blog__article-titles#blog__article-titles
-                ul.blog__article-list#blog__article-list
-                    each article, index in articles
-                        li(id=`${index}`).blog__article-title
-                            a(href=`#${article.title}`).blog__article-link= article.title
+        //- .blog-content__left
+        //-     aside.blog__article-titles#blog__article-titles
+        //-         ul.blog__article-list#blog__article-list
+        //-             each article, index in articles
+        //-                 li(id=`${index}`).blog__article-title
+        //-                     a(
+        //-                         href=`#${article.title}`
+        //-                     ).blog__article-link= article.title
 
-                .blog__article-adaptive-btn#blog__article-adaptive-btn
+        //-         .blog__article-adaptive-btn#blog__article-adaptive-btn
 
         .blog-content__right
             each article, index in articles
@@ -15,9 +17,15 @@ mixin blog(articles)
                 .blog__article(data-idtitle=`${index}`)
                     .blog__title= article.title
                     .blog__date= article.date
-                    .blog__text.simple-text= article.body
+                    .blog__text.simple-text !{article.body}
+                    if article.img
+                        .blog__img
+                            img(src=`${article.img}`, alt="")
 
-                    a(href='#null', onclick=`shareOnFacebook("/blog#${article.title}")`).share-link Поділитися
+                    a(
+                        href=`#${article.title}`
+                        onclick=`shareOnFacebook("/blog#${article.title}")`
+                    ).share-link Поділитися
 
 
 
